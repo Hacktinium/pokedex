@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link href="http://fonts.cdnfonts.com/css/pocket-monk" rel="stylesheet" />
+		<link
+			href="http://fonts.cdnfonts.com/css/super-legend-boy"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
 		<script src="./index.js" defer></script>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pokedex</title>
 	</head>
-	<body>
-		<form id="form">
-			<input type="text" id="name" />
-			<button type="submit">Find</button>
-		</form>
-		<img id="image" />
-		<ul>
-			<li id="HP"></li>
-			<li id="Att"></li>
-			<li id="Def"></li>
-			<li id="Sp Att"></li>
-			<li id="Sp Def"></li>
-			<li id="Spd"></li>
-		</ul>
+	<div class="container flex-center--column">
+		<body>
+			<!-- Form -->
+		<h1>JS Pokédex</h1>
+			<form id="form">
+				<input type="text" id="name" />
+				<button type="submit">Find</button>
+			</form>
+			<div class="pokedex-wrapper">
+				<img class="pokedex-svg" src="img/pokedex.svg" alt="A pokedex" />
+				<div class="sprite-wrapper">
+					<img id="sprite" />
+				</div>
+				<ul class="grid">
+					<li id="HP"></li>
+					<li id="Att"></li>
+					<li id="Def"></li>
+					<li id="Sp Att"></li>
+					<li id="Sp Def"></li>
+					<li id="Spd"></li>
+				</ul>
+			</div>
+	</div>
 	</body>
 </html>

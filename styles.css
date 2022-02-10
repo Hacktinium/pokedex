@@ -1,0 +1,83 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: "Super Legend Boy", sans-serif;
+	background-color: #29aafd;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	color: rgb(209, 209, 209);
+}
+
+h1 {
+	font-family: Pocket Monk, sans-serif;
+	font-size: 7em;
+	color: #fce021;
+	margin-bottom: 0.3em;
+}
+
+input[type="text"] {
+	font-size: 1.5em;
+}
+
+button[type="submit"] {
+	font-family: Pocket Monk, sans-serif;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+}
+
+form {
+	margin-block-end: 4em;
+}
+
+#sprite {
+	object-fit: contain;
+	width: 220px;
+	height: 150px;
+	filter: grayscale(100%);
+	image-rendering: pixelated;
+}
+
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.flex-center--column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pokedex-wrapper {
+	display: block;
+	position: relative;
+}
+
+.sprite-wrapper {
+	width: 380px;
+	position: absolute;
+	top: 200px;
+	left: 90px;
+	border: none;
+}
+
+.grid {
+	width: 289px;
+	height: 81px;
+	display: grid;
+	grid-template-columns: auto auto;
+	position: absolute;
+	z-index: 100;
+	top: 160px;
+	left: 462px;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 0.8em;
+}
