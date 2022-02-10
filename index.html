@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link href="http://fonts.cdnfonts.com/css/pocket-monk" rel="stylesheet" />
-		<link
-			href="http://fonts.cdnfonts.com/css/super-legend-boy"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="styles.css" />
-		<script src="./index.js" defer></script>
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="./index.js" defer></script> 
+		<script defer>
+			console.info('Made with %c♥%c in UK', 'color: #e25555', 'color: unset');
+			</script>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,23 +16,30 @@
 			<!-- Form -->
 		<h1>JS Pokédex</h1>
 			<form id="form">
-				<input type="text" id="name" />
+				<input type="text" id="name" placeholder="Type a Pokémon's name!" />
 				<button type="submit">Find</button>
 			</form>
 			<div class="pokedex-wrapper">
-				<img class="pokedex-svg" src="img/pokedex.svg" alt="A pokedex" />
+				<img class="pokedex-svg" src="./img/pokedex.svg" alt="A pokedex" />
 				<div class="sprite-wrapper">
 					<img id="sprite" />
 				</div>
 				<ul class="grid">
 					<li id="HP"></li>
 					<li id="Att"></li>
-					<li id="Def"></li>
 					<li id="Sp Att"></li>
+					<li id="Def"></li>
 					<li id="Sp Def"></li>
 					<li id="Spd"></li>
 				</ul>
 			</div>
 	</div>
+
+<!-- Footer -->
+
+	<footer>
+		Coded with <span class="heart">♥</span> by Hacktinium
+	</footer>
+
 	</body>
 </html>
