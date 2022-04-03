@@ -2,28 +2,498 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="./styles.css" />
-		<script src="./index.js" defer></script> 
+		<script src="./index.js" defer></script>
 		<script defer>
-			console.info('Made with %c♥%c in UK', 'color: #e25555', 'color: unset');
-			</script>
+			console.info("Made with %c♥%c in UK", "color: #e25555", "color: unset");
+		</script>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pokedex</title>
 	</head>
-	<div class="container flex-center--column">
-		<body>
+	<body>
+		<div class="container flex-center--column">
+			<h1>JS Pokédex</h1>
+
 			<!-- Form -->
-		<h1>JS Pokédex</h1>
 			<form id="form">
 				<input type="text" id="name" placeholder="Type a Pokémon's name!" />
 				<button type="submit">Find</button>
 			</form>
+			<!-- END Form -->
+
 			<div class="pokedex-wrapper">
-				<img class="pokedex-svg" src="./img/pokedex.svg" alt="A pokedex" />
-				<div class="sprite-wrapper">
-					<img id="sprite" />
-				</div>
+				<!-- SVG -->
+				<svg
+					viewBox="0 0 843 600"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<g id="Group 10">
+						<rect
+							id="Rectangle 1"
+							x="1.5"
+							y="1.5"
+							width="447"
+							height="597"
+							rx="6.5"
+							fill="#DC0A2D"
+							stroke="#242424"
+							stroke-width="3"
+						/>
+						<g id="Group 1">
+							<circle
+								id="Ellipse 2"
+								cx="63"
+								cy="58"
+								r="38"
+								fill="url(#paint0_radial_14_8)"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+							<circle
+								id="Ellipse 1"
+								cx="63"
+								cy="58"
+								r="30"
+								fill="url(#paint1_radial_14_8)"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+						</g>
+						<g id="Group 4">
+							<circle
+								id="Ellipse 2_2"
+								cx="150"
+								cy="27"
+								r="7"
+								fill="#C70025"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+							<circle
+								id="Ellipse 3"
+								cx="183.143"
+								cy="27"
+								r="7"
+								fill="#FFEB64"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+							<circle
+								id="Ellipse 4"
+								cx="216.286"
+								cy="27"
+								r="7"
+								fill="#33723B"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+						</g>
+						<g id="Vector 1">
+							<path
+								d="M390 75.0001V583C390 587.418 386.418 591 382 591H18C13.5817 591 10 587.418 10 583V130.479C10 126.06 13.5817 122.479 18 122.479H201.877C203.581 122.479 205.241 121.934 206.614 120.925L277.886 68.5534C279.259 67.5443 280.919 67.0001 282.623 67.0001H382C386.418 67.0001 390 70.5818 390 75.0001Z"
+								fill="#DC0A2D"
+							/>
+							<path
+								d="M0.140472 115H201.877C203.581 115 205.241 114.456 206.614 113.447L277.886 61.0749C279.259 60.0658 280.919 59.5215 282.623 59.5215L448.5 59.5215M10 583V130.479C10 126.06 13.5817 122.479 18 122.479H201.877C203.581 122.479 205.241 121.934 206.614 120.925L277.886 68.5534C279.259 67.5443 280.919 67.0001 282.623 67.0001H382C386.418 67.0001 390 70.5818 390 75.0001V583C390 587.418 386.418 591 382 591H18C13.5817 591 10 587.418 10 583Z"
+								stroke="#242424"
+								stroke-width="3"
+							/>
+						</g>
+						<g id="Vector 3">
+							<path
+								d="M449 75.4303V580.055V590C449 594.418 452.582 598 457 598H832.999C837.417 598 840.999 594.417 840.999 589.999L840.919 123.12C840.918 118.702 837.337 115.121 832.919 115.121H638.078C636.389 115.121 634.743 114.587 633.377 113.594L561.683 61.527C560.317 60.5345 558.671 60 556.982 60H457C452.582 60 449 63.5817 449 68V75.4303Z"
+								fill="#DC0A2D"
+							/>
+							<path
+								d="M457 598H832.999C837.417 598 840.999 594.417 840.999 589.999L840.919 123.12C840.918 118.702 837.337 115.121 832.919 115.121H638.078C636.389 115.121 634.743 114.587 633.377 113.594L561.683 61.527C560.317 60.5345 558.671 60 556.982 60L457 60C452.582 60 449 63.5817 449 68V590C449 594.418 452.582 598 457 598ZM831.006 580.055V130.552C831.006 126.133 827.424 122.552 823.006 122.552H638.078C636.389 122.552 634.743 122.017 633.377 121.025L561.683 68.9573C560.317 67.9649 558.671 67.4304 556.982 67.4304H457C452.582 67.4304 449 71.0121 449 75.4303V580.055C449 584.474 452.582 588.055 457 588.055H823.006C827.424 588.055 831.006 584.474 831.006 580.055Z"
+								stroke="#242424"
+								stroke-width="3"
+							/>
+						</g>
+						<g id="Group 5">
+							<rect
+								id="Rectangle 11"
+								x="731.843"
+								y="376.167"
+								width="47.9899"
+								height="7.66667"
+								rx="2.83333"
+								fill="#002F29"
+								stroke="black"
+								stroke-width="2.33333"
+							/>
+							<rect
+								id="Rectangle 12"
+								x="676.167"
+								y="376.167"
+								width="47.9899"
+								height="7.66667"
+								rx="2.83333"
+								fill="#002F29"
+								stroke="black"
+								stroke-width="2.33333"
+							/>
+						</g>
+						<path
+							id="Vector 2"
+							d="M342 149H58C53.5817 149 50 152.582 50 157V360.828C50 362.814 50.7386 364.729 52.0721 366.201L78.5086 395.372C80.0251 397.046 82.1782 398 84.4365 398H342C346.418 398 350 394.418 350 390V157C350 152.582 346.418 149 342 149Z"
+							fill="#DEDEDE"
+							stroke="#242424"
+							stroke-width="4"
+						/>
+						<circle
+							id="Ellipse 5"
+							cx="98.5"
+							cy="370.5"
+							r="7.5"
+							fill="#F6012A"
+							stroke="#242424"
+							stroke-width="2"
+						/>
+
+						<rect
+							id="display"
+							x="90"
+							y="198"
+							width="220"
+							height="150"
+							rx="4"
+							fill="#242424"
+						/>
+						<image
+							id="sprite"
+							x="90"
+							y="198"
+							width="220"
+							height="150"
+							href=""
+						/>
+
+						<rect
+							id="stats"
+							x="496"
+							y="175"
+							width="288"
+							height="81"
+							rx="3"
+							fill="#242424"
+							stroke="black"
+							stroke-width="2"
+						/>
+						<text
+							id="HP"
+							class="stats-text"
+							x="496"
+							y="175"
+							fill="#dedede"
+							dx="10"
+							dy="20"
+						></text>
+						<text
+							id="Att"
+							class="stats-text"
+							x="496"
+							y="202"
+							fill="#dedede"
+							dx="10"
+							dy="20"
+						></text>
+						<text
+							id="Def"
+							class="stats-text"
+							x="496"
+							y="229"
+							fill="#dedede"
+							dx="10"
+							dy="20"
+						></text>
+						<text
+							id="Sp Att"
+							class="stats-text"
+							x="784"
+							y="175"
+							fill="#dedede"
+							dx="-10"
+							dy="20"
+							text-anchor="end"
+						></text>
+						<text
+							id="Sp Def"
+							class="stats-text"
+							x="784"
+							y="202"
+							fill="#dedede"
+							dx="-10"
+							dy="20"
+							text-anchor="end"
+						></text>
+						<text
+							id="Spd"
+							class="stats-text"
+							x="784"
+							y="229"
+							fill="#dedede"
+							dx="-10"
+							dy="20"
+							text-anchor="end"
+						></text>
+
+						<path
+							id="Rectangle 10"
+							d="M497 277.5H783C783.276 277.5 783.5 277.724 783.5 278V359C783.5 359.276 783.276 359.5 783 359.5H497C496.724 359.5 496.5 359.276 496.5 359V278C496.5 277.724 496.724 277.5 497 277.5Z"
+							fill="#29AAFD"
+							stroke="black"
+							stroke-width="3"
+						/>
+						<g id="Group 2">
+							<circle
+								id="Ellipse 5_2"
+								cx="184"
+								cy="174"
+								r="4"
+								fill="#FD042D"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+							<circle
+								id="Ellipse 6"
+								cx="216.5"
+								cy="174"
+								r="4"
+								fill="#FD042D"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+						</g>
+						<g id="Group 3">
+							<line
+								id="Line 2"
+								x1="284"
+								y1="360"
+								x2="314"
+								y2="360"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+							<line
+								id="Line 3"
+								x1="284"
+								y1="368"
+								x2="314"
+								y2="368"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+							<line
+								id="Line 4"
+								x1="284"
+								y1="376"
+								x2="314"
+								y2="376"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+							<line
+								id="Line 5"
+								x1="284"
+								y1="384"
+								x2="314"
+								y2="384"
+								stroke="#242424"
+								stroke-width="2"
+							/>
+						</g>
+						<rect
+							id="Rectangle 3"
+							x="113.5"
+							y="470.5"
+							width="101"
+							height="62"
+							rx="3.5"
+							fill="#51AD60"
+							stroke="#242424"
+							stroke-width="3"
+						/>
+						<circle id="Ellipse 7" cx="63" cy="469" r="20" fill="#01312D" />
+						<g id="Group 9">
+							<rect
+								id="Rectangle 4"
+								x="105.167"
+								y="435.167"
+								width="46.1766"
+								height="6.66667"
+								rx="2.83333"
+								fill="#EA0A36"
+								stroke="black"
+								stroke-width="2.33333"
+							/>
+							<rect
+								id="Rectangle 5"
+								x="178.657"
+								y="435.167"
+								width="46.1766"
+								height="6.66667"
+								rx="2.83333"
+								fill="#08628E"
+								stroke="black"
+								stroke-width="2.33333"
+							/>
+						</g>
+						<g id="Vector">
+							<mask id="path-28-inside-1_14_8" fill="white">
+								<path
+									d="M301.337 446.32C301.154 442.885 303.889 440 307.329 440H324.667C328.108 440 330.844 442.888 330.658 446.324L329 477V502.5L330.663 533.68C330.846 537.115 328.111 540 324.671 540H307.329C303.889 540 301.154 537.115 301.337 533.68L303 502.5V477.5L301.337 446.32Z"
+								/>
+								<path
+									d="M359.676 475.342C363.112 475.156 366 477.892 366 481.333V498.581C366 502.054 363.061 504.801 359.596 504.567L329 502.5H303L272.404 504.567C268.939 504.801 266 502.054 266 498.581L266 481.419C266 477.946 268.939 475.199 272.404 475.433L303 477.5L329 477L359.676 475.342Z"
+								/>
+							</mask>
+							<path
+								d="M301.337 446.32C301.154 442.885 303.889 440 307.329 440H324.667C328.108 440 330.844 442.888 330.658 446.324L329 477V502.5L330.663 533.68C330.846 537.115 328.111 540 324.671 540H307.329C303.889 540 301.154 537.115 301.337 533.68L303 502.5V477.5L301.337 446.32Z"
+								fill="#02302C"
+							/>
+							<path
+								d="M359.676 475.342C363.112 475.156 366 477.892 366 481.333V498.581C366 502.054 363.061 504.801 359.596 504.567L329 502.5H303L272.404 504.567C268.939 504.801 266 502.054 266 498.581L266 481.419C266 477.946 268.939 475.199 272.404 475.433L303 477.5L329 477L359.676 475.342Z"
+								fill="#09322A"
+							/>
+							<path
+								d="M272.404 475.433L272.337 476.43L272.404 475.433ZM359.596 504.567L359.528 505.565L359.596 504.567ZM359.676 475.342L359.622 474.343L359.676 475.342ZM330.663 533.68L329.664 533.734L330.663 533.68ZM330.658 446.324L329.66 446.27L330.658 446.324ZM307.329 441H324.667V439H307.329V441ZM324.671 539H307.329V541H324.671V539ZM365 481.333V498.581H367V481.333H365ZM267 498.581L267 481.419L265 481.419L265 498.581L267 498.581ZM359.663 503.57L329.067 501.502L328.933 503.498L359.528 505.565L359.663 503.57ZM328.001 502.553L329.664 533.734L331.662 533.627L329.999 502.447L328.001 502.553ZM329 501.5H303V503.5H329V501.5ZM302.933 501.502L272.337 503.57L272.472 505.565L303.067 503.498L302.933 501.502ZM302.336 533.734L303.999 502.553L302.001 502.447L300.338 533.627L302.336 533.734ZM304 502.5V477.5H302V502.5H304ZM303.999 477.447L302.336 446.266L300.338 446.373L302.001 477.553L303.999 477.447ZM272.337 476.43L302.933 478.498L303.067 476.502L272.472 474.435L272.337 476.43ZM303.019 478.5L329.019 478L328.981 476L302.981 476.5L303.019 478.5ZM329.054 477.999L359.73 476.34L359.622 474.343L328.946 476.001L329.054 477.999ZM329.66 446.27L328.001 476.946L329.999 477.054L331.657 446.378L329.66 446.27ZM328 477V502.5H330V477H328ZM267 481.419C267 478.525 269.45 476.235 272.337 476.43L272.472 474.435C268.429 474.162 265 477.367 265 481.419L267 481.419ZM265 498.581C265 502.633 268.429 505.838 272.472 505.565L272.337 503.57C269.45 503.765 267 501.475 267 498.581L265 498.581ZM365 498.581C365 501.475 362.55 503.765 359.663 503.57L359.528 505.565C363.571 505.838 367 502.633 367 498.581H365ZM367 481.333C367 477.319 363.631 474.127 359.622 474.343L359.73 476.34C362.593 476.186 365 478.466 365 481.333H367ZM307.329 539C304.462 539 302.183 536.596 302.336 533.734L300.338 533.627C300.125 537.634 303.316 541 307.329 541V539ZM324.671 541C328.684 541 331.875 537.634 331.662 533.627L329.664 533.734C329.817 536.596 327.538 539 324.671 539V541ZM324.667 441C327.534 441 329.814 443.407 329.66 446.27L331.657 446.378C331.873 442.369 328.681 439 324.667 439V441ZM307.329 439C303.316 439 300.125 442.366 300.338 446.373L302.336 446.266C302.183 443.404 304.462 441 307.329 441V439Z"
+								fill="#09322A"
+								mask="url(#path-28-inside-1_14_8)"
+							/>
+						</g>
+						<path
+							id="Rectangle 6"
+							d="M397 60.5H442C445.59 60.5 448.5 63.4101 448.5 67V592C448.5 595.59 445.59 598.5 442 598.5H397C393.41 598.5 390.5 595.59 390.5 592V67C390.5 63.4102 393.41 60.5 397 60.5Z"
+							stroke="#242424"
+							stroke-width="3"
+						/>
+						<rect
+							id="Rectangle 7"
+							x="390"
+							y="555"
+							width="60"
+							height="7"
+							fill="#242424"
+						/>
+						<rect
+							id="Rectangle 8"
+							x="390"
+							y="97"
+							width="60"
+							height="7"
+							fill="#242424"
+						/>
+						<line
+							id="Line 6"
+							x1="495"
+							y1="318.5"
+							x2="785"
+							y2="318.5"
+							stroke="black"
+						/>
+						<path id="Line 7" d="M553.5 277L553.5 359.5" stroke="black" />
+						<g id="Group 6">
+							<path
+								id="Rectangle 11_2"
+								d="M497 406.5H609C609.276 406.5 609.5 406.724 609.5 407V449C609.5 449.276 609.276 449.5 609 449.5H497C496.724 449.5 496.5 449.276 496.5 449V407C496.5 406.724 496.724 406.5 497 406.5Z"
+								fill="#DEDEDE"
+								stroke="black"
+								stroke-width="3"
+							/>
+							<line
+								id="Line 14"
+								x1="553.5"
+								y1="406"
+								x2="553.5"
+								y2="451"
+								stroke="black"
+							/>
+						</g>
+						<g id="Group 7">
+							<path
+								id="Rectangle 11_3"
+								d="M499 498.5H607C608.381 498.5 609.5 499.619 609.5 501V539C609.5 540.381 608.381 541.5 607 541.5H499C497.619 541.5 496.5 540.381 496.5 539V501C496.5 499.619 497.619 498.5 499 498.5Z"
+								fill="#092621"
+								stroke="black"
+								stroke-width="3"
+							/>
+						</g>
+						<g id="Group 8">
+							<path
+								id="Rectangle 11_4"
+								d="M673 498.5H781C782.381 498.5 783.5 499.619 783.5 501V539C783.5 540.381 782.381 541.5 781 541.5H673C671.619 541.5 670.5 540.381 670.5 539V501C670.5 499.619 671.619 498.5 673 498.5Z"
+								fill="#092621"
+								stroke="black"
+								stroke-width="3"
+							/>
+						</g>
+						<line
+							id="Line 9"
+							x1="611.5"
+							y1="276"
+							x2="611.5"
+							y2="360"
+							stroke="black"
+						/>
+						<path id="Line 11" d="M669.5 277L669.5 359.5" stroke="black" />
+						<line
+							id="Line 12"
+							x1="727.5"
+							y1="276"
+							x2="727.5"
+							y2="360"
+							stroke="black"
+						/>
+						<circle
+							id="Ellipse 8"
+							cx="773.5"
+							cy="446.5"
+							r="17"
+							fill="url(#paint2_radial_14_8)"
+							stroke="black"
+						/>
+					</g>
+					<defs>
+						<radialGradient
+							id="paint0_radial_14_8"
+							cx="0"
+							cy="0"
+							r="1"
+							gradientUnits="userSpaceOnUse"
+							gradientTransform="translate(63 58) rotate(90) scale(39)"
+						>
+							<stop offset="0.822917" stop-color="#E5E5E5" />
+							<stop offset="1" stop-color="#C8CAC9" />
+						</radialGradient>
+						<radialGradient
+							id="paint1_radial_14_8"
+							cx="0"
+							cy="0"
+							r="1"
+							gradientUnits="userSpaceOnUse"
+							gradientTransform="translate(63 58) rotate(90) scale(31)"
+						>
+							<stop stop-color="#4ABAFF" stop-opacity="0" />
+							<stop offset="0.796875" stop-color="#2AADFE" />
+						</radialGradient>
+						<radialGradient
+							id="paint2_radial_14_8"
+							cx="0"
+							cy="0"
+							r="1"
+							gradientUnits="userSpaceOnUse"
+							gradientTransform="translate(773.5 446.5) rotate(90) scale(17.5)"
+						>
+							<stop offset="0.208333" stop-color="#FFFDEF" />
+							<stop offset="0.583333" stop-color="#FCE021" />
+						</radialGradient>
+					</defs>
+				</svg>
+				<!-- END SVG -->
+
 				<ul class="grid">
 					<li id="HP"></li>
 					<li id="Att"></li>
@@ -33,13 +503,7 @@
 					<li id="Spd"></li>
 				</ul>
 			</div>
-	</div>
-
-<!-- Footer -->
-
-	<footer>
-		Coded with <span class="heart">♥</span> by Hacktinium
-	</footer>
-
+			<footer>Coded with <span class="heart">♥</span> by Hacktinium</footer>
+		</div>
 	</body>
 </html>

@@ -24,7 +24,10 @@
 </g>
 <path id="Vector 2" d="M342 149H58C53.5817 149 50 152.582 50 157V360.828C50 362.814 50.7386 364.729 52.0721 366.201L78.5086 395.372C80.0251 397.046 82.1782 398 84.4365 398H342C346.418 398 350 394.418 350 390V157C350 152.582 346.418 149 342 149Z" fill="#DEDEDE" stroke="#242424" stroke-width="4"/>
 <circle id="Ellipse 5" cx="98.5" cy="370.5" r="7.5" fill="#F6012A" stroke="#242424" stroke-width="2"/>
-<rect id="Rectangle 2" x="90" y="198" width="220" height="150" rx="4" fill="#242424"/>
+
+<rect id="display" x="90" y="198" width="220" height="150" rx="4" fill="#242424"/>
+<image id="sprite" x="90" y="198" width="220" height="150" herf=""/>
+
 <rect id="Rectangle 9" x="496" y="175" width="288" height="81" rx="3" fill="#242424" stroke="black" stroke-width="2"/>
 <path id="Rectangle 10" d="M497 277.5H783C783.276 277.5 783.5 277.724 783.5 278V359C783.5 359.276 783.276 359.5 783 359.5H497C496.724 359.5 496.5 359.276 496.5 359V278C496.5 277.724 496.724 277.5 497 277.5Z" fill="#29AAFD" stroke="black" stroke-width="3"/>
 <g id="Group 2">

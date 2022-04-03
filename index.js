@@ -6,7 +6,10 @@ async function handleSubmit(event) {
 			`https://pokeapi.co/api/v2/pokemon/${pokemonName}`
 		);
 		const data = await response.json();
-		document.getElementById("sprite").src = data.sprites.front_default;
+		// document.getElementById("sprite").src = data.sprites.front_default;
+		document
+			.getElementById("sprite")
+			.setAttribute("href", data.sprites.front_default);
 		document.getElementById(
 			"HP"
 		).textContent = `HP: ${data.stats[0].base_stat}`;
@@ -26,7 +29,9 @@ async function handleSubmit(event) {
 			"Spd"
 		).textContent = `Spd: ${data.stats[5].base_stat}`;
 	} catch (e) {
-		document.getElementById("sprite").src = "./img/MissingNo..webp";
+		document
+			.getElementById("sprite")
+			.setAttribute("href", "./img/MissingNo..webp");
 		document.getElementById("HP").textContent = `HP: 404`;
 		document.getElementById("Att").textContent = `Att: 404`;
 		document.getElementById("Def").textContent = `Def: 404`;
