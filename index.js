@@ -1,6 +1,6 @@
 async function handleSubmit(event) {
 	event.preventDefault();
-	const pokemonName = event.target.elements.name.value;
+	const pokemonName = event.target.elements.name.value.toLowerCase();
 	try {
 		const response = await fetch(
 			`https://pokeapi.co/api/v2/pokemon/${pokemonName}`
