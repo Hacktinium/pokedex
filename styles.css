@@ -1,113 +1,130 @@
 @font-face {
-	font-family: "Super Legend Boy";
-	src: url("./fonts/super-legend-boy.woff") format("woff");
+  font-family: "Super Legend Boy";
+  src: url("./fonts/super-legend-boy.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Pocket Monk";
-	src: url("./fonts/pocket-monk.woff") format("woff");
+  font-family: "Pocket Monk";
+  src: url("./fonts/pocket-monk.woff") format("woff");
 }
+:root {
+  --background-color: #29aafd;
+  --primary-color: #fce021;
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  --footer-color: #e8edef;
+  --heart-color: #e74c3c;
+  --font-family: "Super Legend Boy", sans-serif;
 }
-
 html {
-	/* height: 100%; */
+  font-size: 62.5%;
 }
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-	height: 100vh;
-	font-family: "Super Legend Boy", sans-serif;
-	background-color: #29aafd;
-	/* overflow: hidden; */
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  font-size: 1.6rem;
 }
-
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
 h1 {
-	font-family: Pocket Monk, sans-serif;
-	font-size: clamp(4rem, 14vw, 8rem);
-	color: #fce021;
-	margin-bottom: 0.3em;
+  font-family: "Pocket Monk", sans-serif;
+  font-size: 14.2rem;
 }
-
-input[type="text"] {
-	font-size: 1.5em;
-}
-
-button[type="submit"] {
-	font-family: Pocket Monk, sans-serif;
-	font-size: 1.5em;
-	letter-spacing: 0.1em;
-}
-
-form {
-	margin-block-end: 4em;
-	font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-}
-
-footer {
-	background-color: #fff;
-	width: 100%;
-	text-align: center;
-	font-size: 1.1em;
-}
-
-#sprite {
-	object-fit: contain;
-	width: 220px;
-	height: 150px;
-	image-rendering: pixelated;
-}
-
 .container {
-	max-width: 100%;
-	/* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 93.5vh;
 }
-
-.flex-center--column {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100%;
+.header {
+  color: var(--primary-color);
+  padding: 2rem 0;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, 2px 20px 0 #000,
+    2px 20px 0 #000;
 }
-
+#form {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+#form > input {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  padding: 1rem;
+  min-width: 210px;
+  width: 100%;
+}
+#form > button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--background-color);
+  font-size: 1.6rem;
+  padding: 1rem;
+  min-width: 80px;
+}
+#form > button:hover {
+  background-color: #f1c40f;
+  cursor: pointer;
+}
+#form > button:active {
+  background-color: #f1c40f;
+  transform: scale(0.95);
+}
+#form > button:disabled {
+  background-color: #f1c40f;
+  opacity: 0.5;
+}
 .pokedex-wrapper {
-	display: block;
-	position: relative;
-	flex-grow: 1;
-	width: clamp(22rem, 95vw, 65rem);
+  max-width: 1200px;
+  margin-top: 4rem;
+  margin-right: 28rem;
 }
-
-.sprite-wrapper {
-	width: 380px;
-	position: absolute;
-	top: 199px;
-	left: 90px;
-	border: none;
+svg {
+  width: 190%;
 }
-
-/* .grid {
-	width: 275px;
-	height: 89px;
-	display: grid;
-	grid-template-columns: auto auto;
-	position: absolute;
-	z-index: 100;
-	top: 174px;
-	left: 902px;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 0.8em;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	padding-right: 0px;
-	padding-left: 0px;
-} */
-
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--footer-color);
+  padding: 2rem;
+}
+footer p {
+  font-size: 1.4rem;
+}
 .heart {
-	color: #e25555;
+  color: var(--heart-color);
+  margin: 0 0.5rem;
 }
-
-
+/* mobile */
+@media (max-width: 768px) {
+  .container {
+	min-height: 93.5vh;
+  }
+  h1{
+	font-size: 10rem;
+  }
+  .pokedex-wrapper {
+	margin-top: 0;
+	margin-right: 0;
+  }
+  svg {
+	width: 100%;
+  }
+}
