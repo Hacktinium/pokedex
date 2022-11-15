@@ -11,18 +11,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pokedex</title>
 	</head>
-	<body>
-		<div class="container flex-center--column">
-			<h1  class="header">JS Pokédex</h1>
-
-			<!-- Form -->
-			<form id="form">
-				<input type="text" id="name" placeholder="Type a Pokémon's name!" />
-				<button type="submit">Find</button>
-			</form>
+	<body class="flex__column">
+		<div class="container flex__column">
+				<img class='logo' src="./img/Pokédex_logo.png" alt="Pokedex" />
+				<!-- Form -->
+				<form id="form" class="flex__row">
+					<input type="text" id="name" placeholder="Enter Pokémon Name or #" />
+					<button type="submit">search</button>
+				</form>
 			<!-- END Form -->
-
-			<div class="pokedex-wrapper">
 				<!-- SVG -->
 				<svg viewBox="0 0 843 600" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g id="Group 10">
@@ -189,8 +186,7 @@
 					</defs>
 				</svg>
 				<!-- END SVG -->
-			</div>
-		</div>
-		<footer>Coded with <span class="heart">♥</span> by Hacktinium</footer>
+		</div><!-- END container -->
+		<footer class="flex__row">Coded with <span class="heart">♥</span> by Hacktinium</footer>
 	</body>
 </html>
