@@ -4,7 +4,7 @@ async function handleSubmit(event) {
 	try {
 		const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 		const data = await response.json();
-		document.getElementById("sprite").setAttribute("href", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemonName}.gif`);
+		document.getElementById("sprite").setAttribute("href", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${data.id}.gif`);
 		document.getElementById("HP").textContent = `HP: ${data.stats[0].base_stat}`;
 		document.getElementById("Att").textContent = `Att: ${data.stats[1].base_stat}`;
 		document.getElementById("Def").textContent = `Def: ${data.stats[2].base_stat}`;
@@ -36,3 +36,4 @@ function displayMissingNo() {
 
 const form = document.getElementById("form");
 form.addEventListener("submit", handleSubmit);
+
