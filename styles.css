@@ -114,3 +114,11 @@ footer span {
 	color: var(--heart-color);
 	margin: 0 0.5rem;
 }
+.small {
+	height: 100px;
+	transform: translatey(25px);
+}
+.large {
+	height: 140px;
+	transform: translatey(5px);
+}
