@@ -8,6 +8,6 @@ This project taught me about many things, including DOM manipulation and the fet
 <br />
 <br />
 I hope you enjoy having a play! 
-## Demo here: https://hacktinium.github.io/pokedex/
+## Demo here: [hacktinium.github.io/pokedex](https://hacktinium.github.io/pokedex/)
 
 Can you find the easter egg? 👀
